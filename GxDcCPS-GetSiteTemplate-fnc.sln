@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GxDcCPS-GetSiteTemplate-fnc", "GxDcCPS-GetSiteTemplate-fnc\GxDcCPS-GetSiteTemplate-fnc.csproj", "{20611C80-0A96-4E2C-903D-16780A6CCE00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20611C80-0A96-4E2C-903D-16780A6CCE00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20611C80-0A96-4E2C-903D-16780A6CCE00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20611C80-0A96-4E2C-903D-16780A6CCE00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20611C80-0A96-4E2C-903D-16780A6CCE00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {716F8FEC-0BB2-41EE-93F6-5B5EB764E932}
+	EndGlobalSection
+EndGlobal
