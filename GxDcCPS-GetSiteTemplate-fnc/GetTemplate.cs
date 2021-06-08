@@ -58,7 +58,7 @@ namespace GxDcCPSGetSiteTemplatefnc
                     {"TitleFr",oListItem["Template_x0020_Name_x0020__x00280"]},
                     {"DescriptionEn",oListItem["Template_x0020_Description_x0020"]},
                     {"DescriptionFr",oListItem["Template_x0020_Description_x00200"]},
-                    {"TemplateImgUrl",oListItem["Template_x0020_Image_x0020_URL0"]}
+                    {"TemplateImgUrl",oListItem["Template_x0020_Image_x0020_URL"]}
                 });
             }
 
