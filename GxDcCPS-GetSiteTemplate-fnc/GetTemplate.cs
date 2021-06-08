@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -15,7 +16,10 @@ namespace GxDcCPSGetSiteTemplatefnc
         [FunctionName("GetTemplate")]
         public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
         {
-            string siteURL = "https://tbssctdev.sharepoint.com/teams/scw";
+            string appOnlyId = ConfigurationManager.AppSettings["AppOnlyID"];
+            string appOnlySecret = ConfigurationManager.AppSettings["AppOnlySecret"];
+            string TENANT_NAME = ConfigurationManager.AppSettings["TENANT_NAME"];
+            string siteURL = $"https://{TENANT_NAME}.sharepoint.com/teams/scw";
 
 
             // parse query parameter  
@@ -27,7 +31,7 @@ namespace GxDcCPSGetSiteTemplatefnc
 
 
             // SharePoint App only     
-            ClientContext ctx = new OfficeDevPnP.Core.AuthenticationManager().GetAppOnlyAuthenticatedContext(siteURL, "9b92c43f-3a7c-42f8-b8e6-46f302dd5062", "xnxrDaxo4C6ZYW/DUCkO0myF4FHEHs/NTS+vdRenK3Y=");
+            ClientContext ctx = new OfficeDevPnP.Core.AuthenticationManager().GetAppOnlyAuthenticatedContext(siteURL, appOnlyId, appOnlySecret);
 
             Web web = ctx.Web;
             List list = ctx.Web.Lists.GetByTitle("Space templates");
